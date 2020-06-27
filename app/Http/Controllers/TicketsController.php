@@ -46,7 +46,7 @@ class TicketsController extends Controller
         Ticket::create([
             'user_id'    => auth()->id(),
             'place_id'   => $place->id,
-            'id_pemesanan' => $request->id_pemesanan,
+            'kode_pembayaran' => $request->kode_pembayaran,
             'kode_tiket' => $request->kode_tiket
         ]);
         

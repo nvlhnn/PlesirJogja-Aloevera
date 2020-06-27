@@ -168,7 +168,7 @@
       <div class="modal-footer">
         <form action="/buyticket" method="post">
             {{ csrf_field() }}
-            <input type="hidden" name="id_pemesanan" value="{{ $id_pemesanan }}">
+            <input type="hidden" name="kode_pembayaran" value="{{ $id_pemesanan }}">
             <input type="hidden" name="place_id" value="{{ $place->id }}">
             <input type="hidden" value="{{ rand() }}" name="kode_tiket">
             <button type="submit" data-toogle="modal" class="btn btn-primary">Ok</button>

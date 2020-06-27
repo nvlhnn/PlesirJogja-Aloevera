@@ -30,9 +30,8 @@ Auth::routes();
 
 Route::post('/buyticket', 'TicketsController@store')->middleware('auth');
 
-
+Route::resource('adminSale', 'AdminSaleController');
 Route::resource('baskets', 'BasketsController');
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('places', 'PlacesController');
 Route::resource('comments', 'CommentsController');

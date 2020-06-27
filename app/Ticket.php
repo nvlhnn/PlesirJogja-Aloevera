@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ticket extends Model
 {
-    protected $fillable = ['user_id', 'place_id', 'id_pemesanan', 'kode_tiket'];
+    protected $fillable = ['user_id', 'place_id', 'kode_pembayaran', 'kode_tiket'];
 
     public function user()
     {

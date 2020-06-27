@@ -20,7 +20,7 @@
                                         <div class="card-body">
                                             <a><h5 class="card-title"><b>{{ $ticket->place->nama }}</b></h5></a> <br>
                                             {{-- <p class="card-text"> Kode Tiket: {{ $ticket['kode_tiket'] }}</p> --}}
-                                            <p class="card-text"><b>ID Pemesanan: </b>{{ $ticket->id_pemesanan }}</p>
+                                            <p class="card-text"><b>ID Pemesanan: </b>{{ $ticket->kode_pembayaran }}</p>
                                             <p type="card-text"><b>Kode Tiket: </b>{{ $ticket->kode_tiket }}</p>
                                             <p class="card-text"><b>Status:</b> Sudah Dibayar 
                                               <i class=" green check circle icon"></i>
