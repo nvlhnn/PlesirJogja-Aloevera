@@ -409,6 +409,7 @@ class ComposerStaticInit9b1f504ce1431f5e5b3be2a114d9b752
         'App\\Date' => __DIR__ . '/../..' . '/app/Date.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AdminPlaceController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminPlaceController.php',
+        'App\\Http\\Controllers\\AdminSaleController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminSaleController.php',
         'App\\Http\\Controllers\\AdminUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminUserController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',

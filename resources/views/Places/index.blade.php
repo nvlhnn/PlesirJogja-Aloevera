@@ -44,14 +44,14 @@
                                 <div class="card" style="width: 25rem">
                                     <div class="zoom-effect">
                                         <div class="kotak">
-                                            <img src="/images/{{ $place['gambar'] }}" class="zoom" style="width: 350px; height: 300px;" alt="...">
+                                            <img src="/images/{{ $place->gambar }}" class="zoom" style="width: 350px; height: 300px;" alt="...">
                                         </div>               
                                     <div class="card-body" style="margin-top: -150px; color: white; position: absolute">
                                         <a href="/places/{{ $place->id }}" >
-                                            <h2 style="color: white; font-weight: bold" class="card-img-top">{{ $place['nama'] }}</h2>
-                                            <b style="color: #A1DA9E; font-size: 25px">{{ $place->rating }}</b>/5
+                                            <h2 style="font-family: verdana; -webkit-text-stroke: 0.5px black; color: white; font-weight: bold" class="card-img-top">{{ $place->nama }}</h2>
+                                            <b style="font-family: verdana; color: #A1DA9E; -webkit-text-stroke: 0.5px black; font-size: 25px">{{ $place->rating + 0}}/5</b>
                                         </a> <br>
-                                        <a href="/places/{{ $place->id }}" class="btn btn-primary" style="margin-left: 220px">Lihat Detail</a>
+                                        <a href="{{route('places.show', $place->id)}}" class="btn btn-primary" style="margin-left: 220px">Lihat Detail</a>
                                     </div>
                                 </div>
                             </li>

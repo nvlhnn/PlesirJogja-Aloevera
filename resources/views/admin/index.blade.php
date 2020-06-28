@@ -12,7 +12,7 @@
           <p>
               <a href="{{route('adminPlaces.index')}}" class="btn btn-primary btn-lg my-2 mx-2">Obyek Wisata</a>
               <a href="{{route('adminUsers.index')}}" class="btn btn-secondary btn-lg my-2 mx-2">Pengguna</a>
-              <a href="{{route('adminSale.index')}}" class="btn btn-secondary btn-lg my-2 mx-2">Penjualan</a>
+              <a href="{{route('adminSale.create')}}" class="btn btn-secondary btn-lg my-2 mx-2">Penjualan</a>
             </p>
         </div>
       </section>
