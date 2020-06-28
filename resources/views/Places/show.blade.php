@@ -6,7 +6,7 @@
 
     <div class="star-rating">
       <h4 >
-        <b style="color: green">{{ $rat }}</b> / 5  
+        <b style="color: green">{{ $rating + 0 }}/5 </b> 
       </h4>
       <h5 class="py-1 px-1" style="border: green solid 1px; width: 69px; color: green">{{ $place->reviews }} Ulasan</h5>
     </div>
@@ -92,7 +92,7 @@
           <span class="fa fa-star-o" data-rating="3"></span>
           <span class="fa fa-star-o" data-rating="4"></span>
           <span class="fa fa-star-o" data-rating="5"></span>
-          <input type="hidden" name="rating" class="rating-value" value="4" required>
+          <input type="hidden" name="rating" class="rating-value" value="0" required>
       </div> <br>
       <textarea class="form-control mx-4 " style="width: 1030px" name="content" id="komen" rows="3" placeholder="Tuliskan tentang obyek wisata ini" required></textarea>
       <input type="hidden" name="place_id" value="{{$place->id}}"> <br>

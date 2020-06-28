@@ -23,7 +23,18 @@ class AdminSaleController extends Controller
             ->whereBetween('tickets.created_at', [$request->start, $request->end])
             ->groupBy('places.id', 'a', 'b')
             ->get();
-            // return dd($sale);
-            return view('admin.sale.table.index', compact('sale'));
+
+        $rating  = DB::table('tickets')
+            ->leftjoin('comments', 'tickets.place_id', '=', 'comments.place_id')
+        // ->join('comments', 'places.id', '=', 'comments.place_id')
+            ->select(DB::raw('AVG(comments.rating) as rating'))
+            ->whereBetween('tickets.created_at', [$request->start, $request->end])
+            ->groupby('comments.place_id')
+            // ->avg('comments.rating')
+            ->get();
+            
+
+            // return dd($sale, $rating);
+           return view('admin.sale.table.index', compact('sale', 'rating'));
     }
 }

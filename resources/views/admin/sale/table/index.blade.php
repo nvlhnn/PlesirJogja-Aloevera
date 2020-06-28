@@ -30,19 +30,21 @@
                                 <th data-sortable="true" onclick="sortTable(2)" scope="col" style="font-size: 17px;">Harga Tiket (Satuan)</th>
                                 <th data-sortable="true" onclick="sortTable(3)" scope="col" style="font-size: 17px;">Tiket Terjual</th>
                                 <th data-sortable="true" onclick="sortTable(4)" scope="col" style="font-size: 17px;">Total Pemasukan </th>
+                                <th data-sortable="true" onclick="sortTable(4)" scope="col" style="font-size: 17px;">Rating </th>
                             </tr>
                         </thead>
                         @php
                             $no=1;
                         @endphp
                         <tbody id="tabel">
-                            @foreach($sale as $p)
+                            @foreach($sale as $index => $code)
                             <tr style="position: center center">
                                 <td style="text-align: center center">{{$no++}}</td>
-                                <td>{{ $p->a }}</td>
-                                <td>{{ $p->b }}</td>
-                                <td>{{ $p->c}}</td>
-                                <td>{{ $p->d }}</td>
+                                <td>{{ $code->a }}</td>
+                                <td>{{ $code->b }}</td>
+                                <td>{{ $code->c}}</td>
+                                <td>{{ $code->d}}</td>
+                                <td>{{ $rating[$index]->rating + 0 }}</td>
                             </tr>
                             @endforeach
                         </tbody>
