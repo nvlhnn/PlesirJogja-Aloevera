@@ -6,7 +6,7 @@
 
     <div class="star-rating">
       <h4 >
-        <b style="color: green">{{ $place->rating }}</b> / 5  
+        <b style="color: green">{{ $rat }}</b> / 5  
       </h4>
       <h5 class="py-1 px-1" style="border: green solid 1px; width: 69px; color: green">{{ $place->reviews }} Ulasan</h5>
     </div>

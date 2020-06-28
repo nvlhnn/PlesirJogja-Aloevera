@@ -48,21 +48,24 @@ class CommentsController extends Controller
             'rating'=>$request->rating
         ]);
 
-        if($place->rating == 0)
-        {
-            $place->rating = $request->rating;
-        } else 
-        {
-            $place->rating = ($place->rating + $request->rating)/2;
-        }
+        // foreach($place->comments as $p)
+        // {
+        //     if($p->rating == 0){
+        //         $p->rating = $request->rating;
+        //     }
+        //     else{
+        //         $p->rating = ($p->rating + $request->rating)/2;
+        //     }
 
-        $place->reviews++;
+        // $rat = $p->rating;
+
+        // }
 
         $place->save();
 
         session()->flash('notif', 'Ulasan Berhasil ditambahkan');
         
-        return redirect()->back();
+        return redirect(compact('rat'))->back();
     }
 
     /**

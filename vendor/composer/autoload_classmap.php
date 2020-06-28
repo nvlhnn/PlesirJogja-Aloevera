@@ -11,6 +11,7 @@ return array(
     'App\\Date' => $baseDir . '/app/Date.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AdminPlaceController' => $baseDir . '/app/Http/Controllers/AdminPlaceController.php',
+    'App\\Http\\Controllers\\AdminSaleController' => $baseDir . '/app/Http/Controllers/AdminSaleController.php',
     'App\\Http\\Controllers\\AdminUserController' => $baseDir . '/app/Http/Controllers/AdminUserController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
