@@ -25,7 +25,7 @@
                              class="table table-bordered table-hover table-striped" style="font-size: 15px; text-align: center" align="center">
                         <thead>
                             <tr>
-                                <th data-sortable="true"  onclick="sortTable(0)"scope="col" style="font-size: 17px;">No</th>
+                                <th data-sortable="true" onclick="sortTable(0)"scope="col" style="font-size: 17px;">No</th>
                                 <th data-sortable="true" onclick="sortTable(1)" scope="col" style="font-size: 17px;">Nama</th>
                                 <th data-sortable="true" onclick="sortTable(2)" scope="col" style="font-size: 17px;">Harga Tiket (Satuan)</th>
                                 <th data-sortable="true" onclick="sortTable(3)" scope="col" style="font-size: 17px;">Tiket Terjual</th>
