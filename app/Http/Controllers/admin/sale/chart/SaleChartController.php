@@ -26,7 +26,7 @@ class SaleChartController extends Controller
      */
     public function create()
     {
-        return view('admin.sale.chart.dateFormMonth');
+        return view('admin.sale.chart.chart sale.dateFormMonth');
     }
 
     /**
@@ -111,8 +111,12 @@ class SaleChartController extends Controller
             ->fill(false)
             ->linetension(0.1)
             ->dashed([5]);
+
+        $start = current($bulan);
+        $end   = end($bulan);
+        // dd(current($bulan));
         
-        return view('admin\sale\Chart\ChartPenjualan', compact('saleChart'));
+        return view('admin\sale\Chart\chart sale\ChartPenjualan', compact('saleChart', 'start', 'end'));
 
     }
 

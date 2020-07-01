@@ -40,6 +40,8 @@ Route::resource('adminPlaces', 'AdminPlaceController');
 Route::resource('adminUsers', 'AdminUserController');
 Route::resource('Dates', 'DateController');
 Route::resource('adminChart', 'SaleChartController');
+Route::resource('placeChart', 'PlaceChartController');
+
 // Route::resource('tickets', 'TicketsController');
 
 // Route::get('Places/show', 'CommentsController@index');

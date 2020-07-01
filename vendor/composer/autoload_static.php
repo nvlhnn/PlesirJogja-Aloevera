@@ -437,6 +437,7 @@ class ComposerStaticInit9b1f504ce1431f5e5b3be2a114d9b752
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\LiveSearch' => __DIR__ . '/../..' . '/app/Http/Controllers/LiveSearch.php',
         'App\\Http\\Controllers\\LiveSearchController' => __DIR__ . '/../..' . '/app/Http/Controllers/LiveSearchController.php',
+        'App\\Http\\Controllers\\PlaceChartController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/sale/chart/PlaceChartController.php',
         'App\\Http\\Controllers\\PlacesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PlacesController.php',
         'App\\Http\\Controllers\\SaleChartController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/sale/chart/SaleChartController.php',
         'App\\Http\\Controllers\\SchedulesController' => __DIR__ . '/../..' . '/app/Http/Controllers/SchedulesController.php',

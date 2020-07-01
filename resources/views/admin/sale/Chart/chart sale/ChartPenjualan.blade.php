@@ -7,6 +7,8 @@
             <div class="card mt-2">
                 <div class="card-header text-center">
                     <h2><strong>Data Penjualan</strong></h2>
+                    <h3><strong>{{"".$start. "    -    " . $end.""}}</strong></h3>
+
                 </div>
                 <div class="card-body">
                     <ul class="list-inline">
@@ -14,7 +16,7 @@
                             <input class="form-control" type="search" id="search" placeholder="Search" aria-label="Search" style="width: 350px">
                         </li>
                         <li class="list-inline-item" style="margin-left: 540px">
-                            <a href="{{route('adminSale.create')}}" class="btn btn-primary">
+                            <a href="{{route('adminChart.create')}}" class="btn btn-primary">
                                 <i class="plus icon"></i>
                                 Atur Rentang Tanggal
                             </a>

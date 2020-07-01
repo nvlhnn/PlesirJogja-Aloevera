@@ -17,11 +17,11 @@
    <form action="{{ route('adminChart.store') }}" method="post" enctype="multipart/form-data">
        {{ csrf_field() }}
        <div class="form-group">
-           <label for="name">Tanggal Awal:</label>
+           <label for="name">Bulan Awal:</label>
            <input type="month" class="form-control" id="" name="start">
        </div>
        <div class="form-group">
-            <label for="day">Tanggal Akhir: </label>
+            <label for="day">Bulan Akhir: </label>
             <input type="month" class="form-control" id="" name="end">
         </div>
        <div class="form-group">

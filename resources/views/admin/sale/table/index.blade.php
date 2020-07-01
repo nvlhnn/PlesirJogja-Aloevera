@@ -7,6 +7,7 @@
             <div class="card mt-2">
                 <div class="card-header text-center">
                     <h2><strong>Data Penjualan</strong></h2>
+                    <h3><strong>{{"(".$start. ")    s/d    (" . $end.")"}}</strong></h3>
                 </div>
                 <div class="card-body">
                     <ul class="list-inline">
@@ -44,7 +45,7 @@
                                 <td>{{ $code->b }}</td>
                                 <td>{{ $code->c}}</td>
                                 <td>{{ $code->d}}</td>
-                                <td>{{ $rating[$index]->rating + 0 }}</td>
+                                    <td>{{ $rating[$index]->rating + 0 }}</td>
                             </tr>
                             @endforeach
                         </tbody>
