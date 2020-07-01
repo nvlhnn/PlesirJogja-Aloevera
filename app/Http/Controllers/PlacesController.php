@@ -7,6 +7,7 @@ use App\Place;
 use App\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 class PlacesController extends Controller
 {
@@ -17,8 +18,15 @@ class PlacesController extends Controller
      */
     public function index()
     {
-        $places = Place::all();
-        return view('Places.index', compact('places'));
+        $places  = DB::table('places')
+            ->leftjoin('comments', 'places.id', '=', 'comments.place_id')
+        // ->join('comments', 'places.id', '=', 'comments.place_id')
+            ->select('places.nama as nama', 'places.id as id','places.gambar as gambar', DB::raw('AVG(comments.rating) as rating'))
+            ->groupBy('nama', 'id', 'gambar')
+            ->get();
+        // return dd($places);
+
+        return view('places.index', compact('places'));
     }
 
     /**
@@ -59,8 +67,14 @@ class PlacesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Place $place)
-    {              
-        return view('Places.show', compact('place'));
+    {   
+        $rating  = DB::table('places')
+            ->leftjoin('comments', 'places.id', '=', 'comments.place_id')
+        // ->join('comments', 'places.id', '=', 'comments.place_id')
+            ->where('comments.place_id', $place->id)
+            ->avg('comments.rating');
+        return view('Places.show', compact('place', 'rating'));
+        // return dd($rating);
     }
 
     /**
