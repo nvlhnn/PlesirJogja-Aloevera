@@ -39,9 +39,14 @@ Route::resource('schedules', 'SchedulesController');
 Route::resource('adminPlaces', 'AdminPlaceController');
 Route::resource('adminUsers', 'AdminUserController');
 Route::resource('Dates', 'DateController');
+<<<<<<< HEAD
 
 // dashboard admin
 
+=======
+Route::resource('adminChart', 'SaleChartController');
+Route::resource('placeChart', 'PlaceChartController');
+>>>>>>> 77219f9b1dfeeff34d7354595cd09583b61b722c
 
 // Route::resource('tickets', 'TicketsController');
 
