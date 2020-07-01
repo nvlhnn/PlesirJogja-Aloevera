@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
    <!-- Remove This Before You Start -->
-   <h1>Info Pendapatan</h1>
+   <h1>Info Pendapatan Tempat Wisata</h1>
    <hr>
    @if (count($errors) > 0)
    <div class="alert alert-danger">

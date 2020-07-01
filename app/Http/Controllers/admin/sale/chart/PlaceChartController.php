@@ -90,7 +90,7 @@ class PlaceChartController extends Controller
         $placeChart->displaylegend(false);
         // $placeChart->minimalist(true);
         $placeChart->labels($nama);
-        $placeChart->dataset('Total Pendapatan', 'bar', $pendapatan)
+        $placeChart->dataset('Total Pendapatan (Rupiah)', 'bar', $pendapatan)
             ->color($borderColors)
             ->backgroundcolor($fillColors);
 

@@ -20,7 +20,6 @@
                     <table class="table table-bordered table-hover table-striped" style="font-size: 15px; text-align: center" align="center">
                         <thead>
                             <tr>
-                                <th scope="col" style="font-size: 17px;">ID</th>
                                 <th scope="col" style="font-size: 17px;">Nama</th>
                                 <th scope="col" style="font-size: 17px;">Operasional</th>
                                 <th scope="col" style="font-size: 17px;">Buka</th>
@@ -31,17 +30,15 @@
                             </tr>
                         </thead>
                         @php
-                            $no=1;
                         @endphp
                         <tbody id="tabel">
                             @foreach($place as $p)
                             <tr style="position: center center">
-                                <td style="text-align: center center">{{$no++}}</td>
                                 <td>{{ $p->nama }}</td>
                                 <td>{{ $p->hari }}</td>
                                 <td>{{ $p->buka}}</td>
                                 <td>{{ $p->tutup }}</td>
-                                <td>Rp {{ $p->harga_tiket}}</td>
+                                <td>Rp {{ number_format($p->harga_tiket)}}</td>
                                 <td><img width="150px" height="90px" src="{{ url('/images/'.$p->gambar) }}"></td>
 
                                 <td style="font-size: 20px">

@@ -33,10 +33,20 @@ class AdminSaleController extends Controller
             // ->avg('comments.rating')
             ->get();
 
+        //     for ($i=0; $i <= sizeof($sale); $i++) { 
+        //     $total[$i] = $sale[$i]->d;
+        // }
+
+        foreach ($sale as $key => $value) {
+            $q[] = $value->d;
+        }
+
+        $total = array_sum($q);
+        
             $start = $request->start;
             $end = $request->end;
 
-            // dd($start);
-           return view('admin.sale.table.index', compact('sale', 'rating', 'start', 'end'));
+            // dd($total);
+           return view('admin.sale.table.index', compact('sale', 'rating', 'start', 'end', 'total'));
     }
 }

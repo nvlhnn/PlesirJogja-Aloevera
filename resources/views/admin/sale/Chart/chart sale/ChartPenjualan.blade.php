@@ -11,17 +11,11 @@
 
                 </div>
                 <div class="card-body">
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <input class="form-control" type="search" id="search" placeholder="Search" aria-label="Search" style="width: 350px">
-                        </li>
-                        <li class="list-inline-item" style="margin-left: 540px">
-                            <a href="{{route('adminChart.create')}}" class="btn btn-primary">
-                                <i class="plus icon"></i>
-                                Atur Rentang Tanggal
-                            </a>
-                        </li>
-                    </ul>
+                    <a style="margin-left: 900px" href="{{route('adminChart.create')}}" class="btn btn-primary">
+                        <i class="plus icon"></i>
+                         Atur Rentang Tanggal
+                    </a>
+
 
                     <div class="chart-area">
                         {!! $saleChart->container() !!}

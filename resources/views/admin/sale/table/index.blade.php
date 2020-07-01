@@ -21,31 +21,28 @@
                             </a>
                         </li>
                     </ul>
+                    <h4> Total Pemasukan:  Rp. {{number_format($total)}} </h4><br>
                     <table   id="sale"
                             data-toggle="table"
                              class="table table-bordered table-hover table-striped" style="font-size: 15px; text-align: center" align="center">
                         <thead>
                             <tr>
-                                <th data-sortable="true" onclick="sortTable(0)"scope="col" style="font-size: 17px;">No</th>
                                 <th data-sortable="true" onclick="sortTable(1)" scope="col" style="font-size: 17px;">Nama</th>
                                 <th data-sortable="true" onclick="sortTable(2)" scope="col" style="font-size: 17px;">Harga Tiket (Satuan)</th>
                                 <th data-sortable="true" onclick="sortTable(3)" scope="col" style="font-size: 17px;">Tiket Terjual</th>
-                                <th data-sortable="true" onclick="sortTable(4)" scope="col" style="font-size: 17px;">Total Pemasukan </th>
+                                <th data-sortable="true" onclick="sortTable(4)" scope="col" style="font-size: 17px;">Pemasukan </th>
                                 <th data-sortable="true" onclick="sortTable(4)" scope="col" style="font-size: 17px;">Rating </th>
                             </tr>
                         </thead>
-                        @php
-                            $no=1;
-                        @endphp
+
                         <tbody id="tabel">
                             @foreach($sale as $index => $code)
                             <tr style="position: center center">
-                                <td style="text-align: center center">{{$no++}}</td>
                                 <td>{{ $code->a }}</td>
-                                <td>{{ $code->b }}</td>
+                                <td>Rp. {{ number_format($code->b) }}</td>
                                 <td>{{ $code->c}}</td>
-                                <td>{{ $code->d}}</td>
-                                    <td>{{ $rating[$index]->rating + 0 }}</td>
+                                <td>Rp. {{ number_format($code->d)}}</td>
+                                    <td>{{ $rating[$index]->rating + 0 + 0 }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -110,5 +107,15 @@
         }
     }
     }
+
+
+
+        $(document).ready(function () {
+        $('#sale').DataTable({
+            "scrollY": "200px",
+            "scrollCollapse": true,
+        });
+        $('.dataTables_length').addClass('bs-select');
+        });
 </script>
 @endsection
