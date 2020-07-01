@@ -39,6 +39,10 @@ Route::resource('schedules', 'SchedulesController');
 Route::resource('adminPlaces', 'AdminPlaceController');
 Route::resource('adminUsers', 'AdminUserController');
 Route::resource('Dates', 'DateController');
+
+// dashboard admin
+
+
 // Route::resource('tickets', 'TicketsController');
 
 // Route::get('Places/show', 'CommentsController@index');
