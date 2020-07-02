@@ -52,56 +52,35 @@
       <hr class="sidebar-divider">
 
 
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Kelola PlesirJogja</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="{{ url('adminPlaces') }}">Obyek Wisata</a>
-            <a class="collapse-item" href="{{ url('adminUsers') }}">Pengguna</a>
-          </div>
-        </div>
+        <a class="nav-link" href="{{route('adminSale.create')}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Data Penjualan</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Data Penjualan</span>
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Statistik Penjualan</span>
         </a>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Statistik</a>
-            <a class="collapse-item" href="#">Tabel</a>
+            <a class="collapse-item" href="{{route('adminChart.create')}}">Penjualan</a>
+            <a class="collapse-item" href="{{route('placeChart.create')}}">Tempat Wisata</a>
           </div>
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Tempat Wisata</span>
-        </a>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Tempat Wisata</a>
-          </div>
-        </div>
+        <a class="nav-link" href="{{route('adminPlaces.index')}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Data Tempat Wisata</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Pengunjung & Pengelola</span>
-        </a>
-        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Pengunjung</a>
-            <a class="collapse-item" href="#">Pengelola</a>
-          </div>
-        </div>
+        <a class="nav-link" href="{{route('adminUsers.index')}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Data Pengguna</span></a>
       </li>
 
       <!-- Divider -->
