@@ -14,7 +14,7 @@
                         <li class="list-inline-item">
                             <input class="form-control" type="search" id="search" placeholder="Search" aria-label="Search" style="width: 350px">
                         </li>
-                        <li class="list-inline-item" style="margin-left: 540px">
+                        <li class="list-inline-item" style="margin-left: 500px">
                             <a href="{{route('adminSale.create')}}" class="btn btn-primary">
                                 <i class="plus icon"></i>
                                 Atur Rentang Tanggal
@@ -27,10 +27,10 @@
                              class="table table-bordered table-hover table-striped" style="font-size: 15px; text-align: center" align="center">
                         <thead>
                             <tr>
-                                <th data-sortable="true" onclick="sortTable(1)" scope="col" style="font-size: 17px;">Nama</th>
-                                <th data-sortable="true" onclick="sortTable(2)" scope="col" style="font-size: 17px;">Harga Tiket (Satuan)</th>
-                                <th data-sortable="true" onclick="sortTable(3)" scope="col" style="font-size: 17px;">Tiket Terjual</th>
-                                <th data-sortable="true" onclick="sortTable(4)" scope="col" style="font-size: 17px;">Pemasukan </th>
+                                <th data-sortable="true" onclick="sortTable(0)" scope="col" style="font-size: 17px;">Nama</th>
+                                <th data-sortable="true" onclick="sortTable(1)" scope="col" style="font-size: 17px;">Harga Tiket (Satuan)</th>
+                                <th data-sortable="true" onclick="sortTable(2)" scope="col" style="font-size: 17px;">Tiket Terjual</th>
+                                <th data-sortable="true" onclick="sortTable(3)" scope="col" style="font-size: 17px;">Pemasukan </th>
                                 <th data-sortable="true" onclick="sortTable(4)" scope="col" style="font-size: 17px;">Rating </th>
                             </tr>
                         </thead>

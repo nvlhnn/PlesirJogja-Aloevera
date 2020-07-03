@@ -65,7 +65,7 @@ class CommentsController extends Controller
 
         session()->flash('notif', 'Ulasan Berhasil ditambahkan');
         
-        return redirect(compact('rat'))->back();
+        return redirect()->back();
     }
 
     /**

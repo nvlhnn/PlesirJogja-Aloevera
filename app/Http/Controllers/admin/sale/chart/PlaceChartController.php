@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use App\Place;
 use App\Charts\saleChart;
+use DateTime;
 
 
 class PlaceChartController extends Controller
@@ -30,12 +31,16 @@ class PlaceChartController extends Controller
     {
         // ambil awal rentang input
         $sDate = explode('-', $request->start);
-        $sYear   = $sDate[1];
-        $sMonth = $sDate[0];
+        $Month[0] = $sDate[1];
 
         $eDate = explode('-', $request->end);
-        $eYear   = $eDate[1];
-        $eMonth = $eDate[0];
+        $Month[1] = $eDate[1];
+
+        $dateObj1   = DateTime::createFromFormat('!m', $Month[0]);
+        $start = $dateObj1->format('F'); // March
+
+        $dateObj2   = DateTime::createFromFormat('!m', $Month[1]);
+        $end = $dateObj2->format('F'); // March
 
         $request->start = $request->start."-01";
         $request->end = $request->end."-31";
@@ -95,9 +100,9 @@ class PlaceChartController extends Controller
             ->backgroundcolor($fillColors);
 
 
-        return view('admin\sale\Chart\chart place\ChartPlace', compact('placeChart'));
+        return view('admin\sale\Chart\chart place\ChartPlace', compact('placeChart', 'start', 'end'));
 
-        // dd($placeChart);
+        // dd($start, $end);
     }
 
 

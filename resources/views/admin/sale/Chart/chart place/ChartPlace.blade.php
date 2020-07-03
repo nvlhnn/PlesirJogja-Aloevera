@@ -7,6 +7,7 @@
             <div class="card mt-2">
                 <div class="card-header text-center">
                     <h2><strong>Data Penjualan</strong></h2>
+                    <h3><strong>{{"".$start. "    -    " . $end.""}}</strong></h3>
 
                 </div>
                 <div class="card-body">

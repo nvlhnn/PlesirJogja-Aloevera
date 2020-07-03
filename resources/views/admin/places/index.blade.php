@@ -10,7 +10,7 @@
                         <li class="list-inline-item">
                             <input class="form-control" type="search" id="search" placeholder="Search" aria-label="Search" style="width: 350px">
                         </li>
-                        <li class="list-inline-item" style="margin-left: 540px">
+                        <li class="list-inline-item" style="margin-left: 500px">
                             <a href="{{route('adminPlaces.create')}}" class="btn btn-primary">
                                 <i class="plus icon"></i>
                                 Tambah Obyek Wisata

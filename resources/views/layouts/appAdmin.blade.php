@@ -13,6 +13,19 @@
 
   <title>{{ config('apps.name', 'PlesirJogja.com') }}</title>
 
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+	<script src="js/main.js"></script>
 
 
   <!-- Custom fonts for this template-->
@@ -31,7 +44,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #245B43">
+    <ul class="navbar-nav bg-gradient sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #245B43; position: fixed; min-width: 15%">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
@@ -101,10 +114,10 @@
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 sticky-top shadow" style="margin-left: 15%; min-width: 85%; position: fixed;   ">
 
           <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" >
             <i class="fa fa-bars"></i>
           </button>
 
@@ -189,7 +202,7 @@
             @endif
         </div>
         
-        <main class="py-4">
+        <main class="py-4" style="margin-top: 50px; margin-left: 200px">
             @yield('content')
         </main>
         
